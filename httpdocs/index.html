@@ -33,9 +33,9 @@
 	
 			<section class="top-bar-section">
 				<ul>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="#stay-informed">Stay Informed</a></li>
+					<li><a class="about" href="#about">About</a></li>
+					<li><a class="contact" href="#contact">Contact</a></li>
+					<li><a class="stay-informed" href="#stay-informed">Stay Informed</a></li>
 				</ul>
 			</section>
 		</nav>
@@ -214,6 +214,25 @@
 <script>
 $(function() {
 	$(document).foundation();
+
+	$(".about").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("#about").offset().top
+	    }, 500);
+	});
+
+	$(".contact").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("#contact").offset().top
+	    }, 500);
+	});
+
+	$(".stay-informed").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("#stay-informed").offset().top
+	    }, 500);
+	});
+
 });
 </script>
 
