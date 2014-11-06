@@ -10880,35 +10880,36 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -999;
 }
 
-/* line 17, ../../../scss/pages/_landing.scss */
+/* line 21, ../../../scss/pages/_landing.scss */
 #about {
   padding: 2em 0;
   text-align: center;
 }
-/* line 21, ../../../scss/pages/_landing.scss */
+/* line 25, ../../../scss/pages/_landing.scss */
 #about .logo {
   margin-bottom: 3em;
 }
-/* line 25, ../../../scss/pages/_landing.scss */
+/* line 29, ../../../scss/pages/_landing.scss */
 #about h1 {
   font-size: 2.5em;
   line-height: 1.2em;
   color: #5f7080;
   margin-bottom: 1em;
 }
-/* line 32, ../../../scss/pages/_landing.scss */
+/* line 36, ../../../scss/pages/_landing.scss */
 #about .social {
   margin-bottom: 2em;
 }
 
-/* line 38, ../../../scss/pages/_landing.scss */
+/* line 42, ../../../scss/pages/_landing.scss */
 #webinar-signup {
   padding: 2em 0;
   background: #e5e5e5;
 }
-/* line 42, ../../../scss/pages/_landing.scss */
+/* line 46, ../../../scss/pages/_landing.scss */
 #webinar-signup h1 {
   color: #ff6600;
   font-weight: bold;
@@ -10916,51 +10917,51 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 50, ../../../scss/pages/_landing.scss */
+/* line 54, ../../../scss/pages/_landing.scss */
 #webinar-signup h4 {
   text-align: center;
   color: #29444f;
   margin-bottom: 2em;
 }
-/* line 56, ../../../scss/pages/_landing.scss */
+/* line 60, ../../../scss/pages/_landing.scss */
 #webinar-signup .webinar-signup-cta {
   margin-bottom: 1em;
 }
-/* line 60, ../../../scss/pages/_landing.scss */
+/* line 64, ../../../scss/pages/_landing.scss */
 #webinar-signup ul.checkbox-list {
   margin: 0px;
   padding: 0;
   list-style: none;
   font-size: 1.25em;
 }
-/* line 66, ../../../scss/pages/_landing.scss */
+/* line 70, ../../../scss/pages/_landing.scss */
 #webinar-signup ul.checkbox-list li {
   background: transparent url(/assets/images/checkbox.png) no-repeat scroll 0 0;
   padding-left: 50px;
   line-height: 37px;
 }
 
-/* line 75, ../../../scss/pages/_landing.scss */
+/* line 79, ../../../scss/pages/_landing.scss */
 #stay-informed {
   padding: 4em 0;
 }
-/* line 78, ../../../scss/pages/_landing.scss */
+/* line 82, ../../../scss/pages/_landing.scss */
 #stay-informed form {
   padding: 1em 0.5em;
 }
-/* line 82, ../../../scss/pages/_landing.scss */
+/* line 86, ../../../scss/pages/_landing.scss */
 #stay-informed h1 {
   font-size: 1.375rem;
   color: #fff;
   line-height: 2em;
 }
-/* line 89, ../../../scss/pages/_landing.scss */
+/* line 93, ../../../scss/pages/_landing.scss */
 #stay-informed .cta-text p {
   font-size: 1.375rem;
   font-weight: bold;
 }
 
-/* line 97, ../../../scss/pages/_landing.scss */
+/* line 101, ../../../scss/pages/_landing.scss */
 .webinar-signup-cta {
   /*
   	border: 2px solid white;
@@ -10974,23 +10975,23 @@ body {
   font-weight: bold;
   line-height: 1.2em;
 }
-/* line 110, ../../../scss/pages/_landing.scss */
+/* line 114, ../../../scss/pages/_landing.scss */
 .webinar-signup-cta:hover {
   color: #fff;
   background: #ee5500;
 }
 
-/* line 117, ../../../scss/pages/_landing.scss */
+/* line 121, ../../../scss/pages/_landing.scss */
 .subscribe {
   background: #6c6c6c;
 }
-/* line 119, ../../../scss/pages/_landing.scss */
+/* line 123, ../../../scss/pages/_landing.scss */
 .subscribe h2 {
   color: #fff;
   font-size: 2rem;
 }
 
-/* line 125, ../../../scss/pages/_landing.scss */
+/* line 129, ../../../scss/pages/_landing.scss */
 .button.submit {
   background: #ff6600;
   color: #fff;
