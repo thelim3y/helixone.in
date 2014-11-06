@@ -45,13 +45,13 @@ $row-width: rem-calc(1280);
 // We use these to control various global styles
 $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 //$font-weight-normal:normal;
 //$body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+$font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
@@ -1235,7 +1235,7 @@ $topbar-link-color-hover: #fff;
 $topbar-link-color-active: #ee843a;
 //$topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: $font-weight-normal;
-$topbar-link-font-size: rem-calc(18);
+$topbar-link-font-size: rem-calc(20);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-color-hover: #fff;
