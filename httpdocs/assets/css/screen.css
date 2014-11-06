@@ -10964,9 +10964,11 @@ body {
 #stay-informed .cta-text p {
   font-size: 1.375rem;
   font-weight: bold;
+  color: #607177;
+  margin: 15% 0 0;
 }
 
-/* line 107, ../../../scss/pages/_landing.scss */
+/* line 109, ../../../scss/pages/_landing.scss */
 .webinar-signup-cta {
   /*
   	border: 2px solid white;
@@ -10980,13 +10982,13 @@ body {
   font-weight: bold;
   line-height: 1.2em;
 }
-/* line 120, ../../../scss/pages/_landing.scss */
+/* line 122, ../../../scss/pages/_landing.scss */
 .webinar-signup-cta:hover {
   color: #fff;
   background: #ee5500;
 }
 
-/* line 127, ../../../scss/pages/_landing.scss */
+/* line 129, ../../../scss/pages/_landing.scss */
 .disclaimer h4 {
   font-size: .8em;
   color: #fff;
@@ -10996,17 +10998,17 @@ body {
   letter-spacing: 1px;
 }
 
-/* line 137, ../../../scss/pages/_landing.scss */
+/* line 139, ../../../scss/pages/_landing.scss */
 .subscribe {
   background: #6c6c6c;
 }
-/* line 139, ../../../scss/pages/_landing.scss */
+/* line 141, ../../../scss/pages/_landing.scss */
 .subscribe h2 {
   color: #fff;
   font-size: 2rem;
 }
 
-/* line 145, ../../../scss/pages/_landing.scss */
+/* line 147, ../../../scss/pages/_landing.scss */
 .button.submit {
   background: #ff6600;
   color: #fff;
