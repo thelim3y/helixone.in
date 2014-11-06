@@ -42,10 +42,15 @@
 	</header>
 
 	<div class="video-container">
-		<video autoplay loop>
-			<source src="/assets/video/helixone_bg.mp4" type="video/mp4">
-			<source src="/assets/video/helixone_bg.webm" type="video/webm">
-		</video>
+		<div class="hero-bg">
+			<video width="1280" height="720" autoplay="autoplay" loop="true">
+				<source src="/assets/video/helixone_bg.mp4" type="video/mp4">
+				<source src="/assets/video/helixone_bg.webm" type="video/webm">
+			</video>
+
+			<a style="display: none;" class="vid_control play" href="#Play" role="button">Paused. Click to play.</a>
+			<a class="vid_control pause" href="#Pause" role="button">Pause</a>
+		</div>
 	</div>
 
 	<div class="">
@@ -214,6 +219,41 @@
 <script>
 $(function() {
 	$(document).foundation();
+
+	var $el = $('.hero-bg'),
+		$v = $('video', $el),
+		v_w = $v.width(),
+		v_h = $v.height(),
+		v_aspect = v_w / v_h;
+	
+	$(window).on('resize', Foundation.utils.throttle(function(e) {
+		var w = $el.width(),
+		h = $el.height(),
+		s_aspect = w / h;
+
+		console.log(v_w, v_h, v_aspect, w, h, s_aspect);
+
+		var ww = w, hh = 'auto';
+		if(v_aspect > s_aspect) {
+			ww = 'auto';
+			hh = h;
+		}
+
+		$('video', $el).width(ww);
+		$('video', $el).height(hh);
+	}, 300)).resize();
+
+	$('.vid_control.pause').on('click', function() {
+		$v[0].pause();
+		$(this).hide();
+		$('.vid_control.play').show();
+	});
+
+	$('.vid_control.play').on('click', function() {
+		$v[0].play();
+		$(this).hide();
+		$('.vid_control.pause').show();
+	});
 });
 </script>
 
