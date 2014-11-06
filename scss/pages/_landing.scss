@@ -106,6 +106,10 @@ body {
 		
 	}
 
+	.webinar-date {
+		font-size: 1.5em;
+	}
+
 	ul.checkbox-list {
 		margin: 0px;
 		padding: 0;
@@ -138,6 +142,8 @@ body {
 		p {
 			font-size: rem-calc(22);
 			font-weight: bold;
+			color:#607177;
+			margin:15% 0 0;
 		}
 	}
 }
@@ -162,6 +168,16 @@ body {
 	}
 }
 
+.disclaimer {
+	h4 {
+		font-size: .8em;
+		color: #fff;
+		width:80%;
+		margin: 10px 0 0 80px;
+		font-weight: 100;
+		letter-spacing: 1px;
+	}
+}
 
 .subscribe {
 	background: #6c6c6c;
