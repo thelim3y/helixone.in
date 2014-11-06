@@ -1,0 +1,23 @@
+footer {
+	background: #58707c;
+	color: #fff;
+	padding: 2em;
+	
+	.address {
+		img {
+			margin-bottom: 1em;
+		}
+	}
+	
+	.contact-form {
+		h4 {
+			color: #fff;
+		}
+	}
+
+	.disclaimer {
+		p {
+			font-size: rem-calc(14);
+		}
+	}
+}

@@ -1,0 +1,131 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+#fixed-top {
+	height: 100%;
+	
+	.video-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+
+#about {
+	padding: 2em 0;
+	text-align: center;
+	
+	.logo {
+		margin-bottom: 3em;
+	}
+	
+	h1 {
+		font-size: 2.5em;
+		line-height: 1.2em;
+		color: #5f7080;
+		margin-bottom: 1em;
+	}
+	
+	.social {
+		margin-bottom: 2em;
+	}
+}
+
+
+#webinar-signup {
+	padding: 2em 0;
+	background: #e5e5e5;
+
+	h1 {
+		color: #ff6600;
+		font-weight: bold;
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	h4 {
+		text-align: center;
+		color: #29444f;
+		margin-bottom: 2em;
+	}
+
+	.webinar-signup-cta {
+		margin-bottom: 1em;
+	}
+
+	ul.checkbox-list {
+		margin: 0px;
+		padding: 0;
+		list-style: none;
+		font-size: 1.25em;
+
+		li {
+			background: transparent url(/assets/images/checkbox.png) no-repeat scroll 0 0;
+			padding-left: 50px;
+			line-height: 37px;
+		}
+	}
+}
+
+
+#stay-informed {
+	padding: 4em 0;
+	
+	form {
+		padding: 1em 0.5em;
+	}
+	
+	h1 {
+		font-size: rem-calc(22px);
+		color: #fff;
+		line-height: 2em;
+	}	
+	
+	.cta-text {
+		p {
+			font-size: rem-calc(22);
+			font-weight: bold;
+		}
+	}
+}
+
+
+.webinar-signup-cta {
+/*
+	border: 2px solid white;
+	@include border-radius(9px);
+*/
+	background: #ff6600;
+	color: #fff;
+	padding: 0.5em;
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 1.2em;
+	
+	&:hover {
+		color: #fff;
+		background: #ee5500;
+	}
+}
+
+
+.subscribe {
+	background: #6c6c6c;
+	h2 {
+		color:#fff;
+		font-size: rem-calc(32);
+	}
+}
+
+.button.submit {
+	background: #ff6600;
+	color: #fff;
+	font-size: rem-calc(14);
+	padding: 0.5rem 0.875rem;
+	margin: 0;
+}

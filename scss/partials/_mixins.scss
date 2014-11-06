@@ -1,0 +1,18 @@
+@mixin clear-after() {
+	&:after {
+	    clear: both;
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    visibility: hidden;
+	}
+}
+
+@mixin placeholder-color($col) {
+	&::-webkit-input-placeholder, 
+	&:-moz-placeholder, 
+	&::-moz-placeholder, 
+	&:-ms-input-placeholder {
+		color: $col;
+	}
+}

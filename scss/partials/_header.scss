@@ -1,0 +1,14 @@
+header {
+}
+.top-bar {
+	.name {
+		padding: 10px 20px 0;
+		
+		.logo {
+			display: block;
+			width: 178px;
+			height: 80px;
+			background: #fff url(/assets/images/logo-header.png) no-repeat scroll 0 0;
+		}
+	}
+}
