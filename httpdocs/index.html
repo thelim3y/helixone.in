@@ -57,8 +57,26 @@
 				</div>
 			</div>
 
-			<a style="display: none;" class="vid_control play" href="#Play" role="button">Paused. Click to play.</a>
-			<a class="vid_control pause" href="#Pause" role="button">Pause</a>
+			<a style="display: none;" class="vid_control play" href="javascript://" role="button">Paused. Click to play.</a>
+			<a class="vid_control pause" href="javascript://" role="button">Pause</a>
+		</div>
+	</div>
+
+	<div class="sticky-bottom">
+		<div class="cta-tagline">
+			<div class="row">
+				<div class="small-12 small-centered columns">
+					<p>Made By Traders. For Traders.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="cta-lower">
+			<div class="row">
+				<div class="small-12 small-centered columns wrap">
+					<a title="There's more below" id="cta-bottom-arrow" class="fancy-down-arrow-grey" href="#about">Scroll to next panel</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -165,7 +183,7 @@
 
 <footer id="contact">
 	<div class="row">
-		<div class="small-12 medium-6 large-4 columns address">
+		<div class="small-12 medium-6 large-3 columns address">
 			<img src="/assets/images/logo-footer.png" alt="Helix One Trading" />
 
 			<h4>Made by traders. For traders.</h4>
@@ -177,7 +195,7 @@
 			</p>			
 		</div>
 
-		<div class="small-12 medium-6 large-4 columns contact-form">
+		<div class="small-12 medium-6 large-5 columns contact-form">
 			<h4>Contact Us</h4>
 			
 			<form action="/" method="post" name="contact_form">
@@ -201,7 +219,7 @@
 
 				<div class="row collapse">
 					<div class="small-12  columns">
-						<textarea rows="4" name="message"></textarea>
+						<textarea rows="3" name="message"></textarea>
 					</div>
 				</div>
 
@@ -212,10 +230,10 @@
 		</div>
 
 		<div class="small-12 large-4 columns disclaimer">
-			
-				<h4>Risk Disclaimer: <br />
-				Trading Futures, Options on Futures, and retail off-exchange foreign currency transactions involves substantial risk of loss and is not suitable for all investors. You should carefully consider whether trading is suitable for you in light of your circumstances, knowledge, and financial resources. You may lose all or more of your initial investment. Opinions, market data, and recommendations are subject to change at any time.</h4>
-			
+			<h4>Risk Disclaimer:</h4>
+			<p>
+				Trading Futures, Options on Futures, and retail off-exchange foreign currency transactions involves substantial risk of loss and is not suitable for all investors. You should carefully consider whether trading is suitable for you in light of your circumstances, knowledge, and financial resources. You may lose all or more of your initial investment. Opinions, market data, and recommendations are subject to change at any time.
+			</p>
 		</div>
 	</div>
 </footer>
@@ -247,15 +265,25 @@ $(function() {
 		$('video', $el).height(hh);
 	}, 300)).resize();
 
-	$('.vid_control.pause').on('click', function() {
+	$('.vid_control.pause').on('click', function(ev) {
+		ev.preventDefault();
 		$v[0].pause();
 		$(this).hide();
+
+		$v.removeClass('playing');
+		$v.addClass('paused');
+
 		$('.vid_control.play').show();
 	});
 
-	$('.vid_control.play').on('click', function() {
+	$('.vid_control.play').on('click', function(ev) {
+		ev.preventDefault();
 		$v[0].play();
 		$(this).hide();
+
+		$v.removeClass('paused');
+		$v.addClass('playing');
+
 		$('.vid_control.pause').show();
 	});
 
@@ -274,6 +302,12 @@ $(function() {
 	$(".stay-informed").click(function() {
 	    $('html, body').animate({
 	        scrollTop: $("#stay-informed").offset().top
+	    }, 500);
+	});
+
+	$("#cta-bottom-arrow").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("#about").offset().top
 	    }, 500);
 	});
 });

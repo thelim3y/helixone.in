@@ -7,17 +7,33 @@ footer {
 		img {
 			margin-bottom: 1em;
 		}
+		
+		h4 {
+			color: #fff;
+		}
 	}
 	
 	.contact-form {
 		h4 {
 			color: #fff;
 		}
+		
+		.button {
+			background: #48606c;
+			
+			&:hover {
+				background: #38505c;
+			}
+		}
 	}
 
 	.disclaimer {
+		h4 {
+			color: #fff;
+		}
+		
 		p {
-			font-size: rem-calc(14);
+			font-size: rem-calc(16);
 		}
 	}
 }

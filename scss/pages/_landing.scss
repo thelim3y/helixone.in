@@ -50,7 +50,53 @@
 			left: auto;
 			z-index: -1;
 			@include opacity(0.75);
+			
+			@include transition(opacity 0.3s ease-in-out);
+			
+			&.paused {
+				@include opacity(0.5);
+			}
 		}
+
+		.vid_control {
+			display: block;
+			position: absolute;
+			right: 100px;
+			bottom: 100px;
+			width: 36px;
+			height: 36px;
+			border: 1px solid #fff;
+			border-radius: 22px;
+			color: #fff;
+			text-indent: -999em;
+			bottom: 150px;
+		
+			&.play:after {
+				content: '';
+				position: absolute;
+				top: 11px;
+				left: 12px;
+				width: 0;
+				height: 0;
+				border: 14px solid transparent;
+				border-width: 7px 14px;
+				border-left-color: #fff;
+				overflow: hidden;
+			}
+		
+			&.pause:before {
+				content: ' ';
+				position: absolute;
+				top: 10px;
+				left: 12px;
+				width: 10px;
+				height: 14px;
+				border: 3px solid #fff;
+				border-top: none;
+				border-bottom: none;
+			}
+		}
+
 
 		.cta-text {
 			display: table-cell;
@@ -58,7 +104,55 @@
 			
 			h4 {
 				color: #fff;
-				font-size: rem-calc(32);
+				font-size: rem-calc(34);
+			}
+			
+			a {
+				font-size: rem-calc(24);
+			}
+		}
+	}
+
+	.sticky-bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+		border-bottom: 1px solid #ccc;
+		
+		.cta-tagline {
+			font-size: rem-calc(20);
+			color: #fff;
+			background: rgba(0, 0, 0, 0.5);
+			
+			p {
+				margin: 0;
+				text-align: center;
+				padding: 1.5em 0;
+			}
+		}
+		
+		.cta-lower {
+			background: #fff;
+			color: #000;
+			
+			.wrap {
+				padding: 0.5em 0;
+			}
+			
+			a {
+				border: 1px solid #d3d3d3;
+				border-radius: 21px;
+				display: block;
+				margin: 0 auto;
+				height: 38px;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+				text-indent: -999em;
+				width: 38px;
+				background: transparent url(/assets/images/cta-bottom-down-arrow.png) no-repeat scroll 50% 50% / 22px 13px;
 			}
 		}
 	}
@@ -131,6 +225,15 @@
 #stay-informed {
 	padding: 4em 0;
 	
+	.subscribe {
+		background: #6c6c6c;
+
+		h2 {
+			color:#fff;
+			font-size: rem-calc(32);
+		}
+	}
+
 	form {
 		padding: 1em 0.5em;
 	}
@@ -153,10 +256,8 @@
 
 
 .webinar-signup-cta {
-/*
 	border: 2px solid white;
 	@include border-radius(9px);
-*/
 	background: #ff6600;
 	color: #fff;
 	padding: 0.5em;
@@ -171,68 +272,10 @@
 	}
 }
 
-.disclaimer {
-	h4 {
-		font-size: .8em;
-		color: #fff;
-		width:80%;
-		margin: 10px 0 0 80px;
-		font-weight: 100;
-		letter-spacing: 1px;
-	}
-}
-
-.subscribe {
-	background: #6c6c6c;
-	h2 {
-		color:#fff;
-		font-size: rem-calc(32);
-	}
-}
-
 .button.submit {
 	background: #ff6600;
 	color: #fff;
 	font-size: rem-calc(14);
-	padding: 0.5rem 0.875rem;
+	padding: 0.3rem 0.875rem;
 	margin: 0;
-}
-
-
-.vid_control {
-	display: block;
-	position: absolute;
-	right: 100px;
-	bottom: 100px;
-	width: 36px;
-	height: 36px;
-	border: 1px solid #fff;
-	border-radius: 22px;
-	color: #fff;
-	text-indent: -999em;
-
-	&.play:after {
-		content: '';
-		position: absolute;
-		top: 11px;
-		left: 12px;
-		width: 0;
-		height: 0;
-		border: 14px solid transparent;
-		border-width: 7px 14px;
-		border-left-color: #fff;
-		overflow: hidden;
-	}
-
-	&.pause:before {
-		content: ' ';
-		position: absolute;
-		top: 11px;
-		left: 12px;
-		width: 10px;
-		height: 14px;
-		border: 3px solid #fff;
-		border-top: none;
-		border-bottom: none;
-	}
 }
