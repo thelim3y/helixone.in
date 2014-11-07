@@ -195,7 +195,9 @@
 		<div class="small-12 medium-6 large-5 columns contact-form">
 			<h4>Contact Us</h4>
 			
-			<form action="/" method="post" name="contact_form">
+			<form action="/" method="post" id="contact_form" name="contact_form">
+				<input type="hidden" name="action" value="contact" />
+
 				<div class="row collapse">
 					<div class="small-2 columns">
 						<span class="prefix"><i class="fi-torsos"></i></span>
@@ -210,18 +212,18 @@
 						<span class="prefix"><i class="fi-mail"></i></span>
 					</div>
 					<div class="small-10  columns">
-						<input type="text" name="name" value="" placeholder="Your Email" required="" />
+						<input type="email" name="email" value="" placeholder="Your Email" required="" />
 					</div>
 				</div>
 
 				<div class="row collapse">
 					<div class="small-12  columns">
-						<textarea rows="3" name="message"></textarea>
+						<textarea rows="3" name="message" required=""></textarea>
 					</div>
 				</div>
 
 				<div class="row collapse text-right">
-					<button class="button tiny submit">Send</button>
+					<button class="button tiny submit contact-submit">Send</button>
 				</div>
 			</form>
 		</div>
@@ -234,6 +236,14 @@
 		</div>
 	</div>
 </footer>
+
+<div id="ajaxModal" class="reveal-modal" data-reveal>
+	<h2>Info</h2>
+	<p class="lead"></p>
+	<p class="msg"></p>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
 
 <script>
 $(function() {
@@ -250,8 +260,6 @@ $(function() {
 		h = $el.height(),
 		s_aspect = w / h;
 
-		console.log(v_w, v_h, v_aspect, w, h, s_aspect);
-
 		var ww = w, hh = 'auto';
 		if(v_aspect > s_aspect) {
 			ww = 'auto';
@@ -260,7 +268,7 @@ $(function() {
 
 		$('video', $el).width(ww);
 		$('video', $el).height(hh);
-	}, 300)).resize();
+	}, 150)).resize();
 
 	$('.vid_control.pause').on('click', function(ev) {
 		ev.preventDefault();
@@ -306,6 +314,35 @@ $(function() {
 	    $('html, body').animate({
 	        scrollTop: $("#about").offset().top
 	    }, 500);
+	});
+	
+	$('#contact_form').on('submit', function(ev) {
+		ev.preventDefault();
+		
+		$.ajax({
+			type: "POST",
+			
+			url: '/ajax.php',
+			data: $(this).serialize(),
+			success: function(data) {
+				$('.lead', '#ajaxModal').html('Success');
+				$('.msg', '#ajaxModal').html(data.success);
+				$('#ajaxModal').foundation('reveal', 'open');
+			},
+			error: function(xhr, status, msg) {
+				var data = $.parseJSON(xhr.responseText);
+
+				if(data.error) {
+					$('.lead', '#ajaxModal').html('Error');
+
+					for(var i = 0, j = data.error.length; i < j; i++) {
+						$('.msg', '#ajaxModal').html(data.error[i] + '<br />');
+					}
+					
+					$('#ajaxModal').foundation('reveal', 'open');
+				}
+			}
+		});
 	});
 });
 </script>
