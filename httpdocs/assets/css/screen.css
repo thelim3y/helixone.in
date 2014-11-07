@@ -10899,33 +10899,42 @@ footer .disclaimer p {
 /* line 15, ../../../scss/pages/_landing.scss */
 #fixed-top header .top-bar li a {
   letter-spacing: 1px;
+  padding: 0 1em;
+  font-size: 1.125rem;
 }
-/* line 22, ../../../scss/pages/_landing.scss */
+/* line 24, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container {
   position: relative;
-  top: -100px;
   width: 100%;
-  height: 100%;
   z-index: 2;
+  top: -100px;
+  height: 100%;
+  overflow: hidden;
 }
-/* line 29, ../../../scss/pages/_landing.scss */
+/* line 32, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container .hero-bg {
+  display: table;
   position: relative;
   overflow: hidden;
-  min-height: 540px;
+  width: 100%;
   height: 100%;
   background: transparent url(/assets/images/helixone_bg.mp4.jpg) no-repeat right top scroll;
   background-image: none;
   background-size: cover;
   z-index: 0;
-  display: table;
-  width: 100%;
 }
-/* line 42, ../../../scss/pages/_landing.scss */
+/* line 45, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container .webinar-signup-cta {
   padding: 1em;
 }
-/* line 46, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 650px) {
+  /* line 45, ../../../scss/pages/_landing.scss */
+  #fixed-top .video-container .webinar-signup-cta {
+    font-size: 1.25rem;
+    padding: 0.5em;
+  }
+}
+/* line 54, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container video {
   position: absolute;
   right: 0;
@@ -10939,26 +10948,32 @@ footer .disclaimer p {
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
-/* line 56, ../../../scss/pages/_landing.scss */
+/* line 64, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container video.paused {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 61, ../../../scss/pages/_landing.scss */
+/* line 69, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container .vid_control {
   display: block;
   position: absolute;
-  right: 100px;
-  bottom: 100px;
+  right: 10px;
+  bottom: 140px;
   width: 36px;
   height: 36px;
   border: 1px solid #fff;
   border-radius: 22px;
   color: #fff;
   text-indent: -999em;
-  bottom: 150px;
 }
-/* line 74, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 599px) {
+  /* line 69, ../../../scss/pages/_landing.scss */
+  #fixed-top .video-container .vid_control {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+/* line 86, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container .vid_control.play:after {
   content: '';
   position: absolute;
@@ -10971,7 +10986,7 @@ footer .disclaimer p {
   border-left-color: #fff;
   overflow: hidden;
 }
-/* line 87, ../../../scss/pages/_landing.scss */
+/* line 99, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container .vid_control.pause:before {
   content: ' ';
   position: absolute;
@@ -10983,21 +10998,43 @@ footer .disclaimer p {
   border-top: none;
   border-bottom: none;
 }
-/* line 101, ../../../scss/pages/_landing.scss */
+/* line 113, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container .cta-text {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 105, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 650px) {
+  /* line 113, ../../../scss/pages/_landing.scss */
+  #fixed-top .video-container .cta-text {
+    padding: 2em 0;
+    padding-top: 100px;
+  }
+}
+@media screen and (max-height: 480px) {
+  /* line 113, ../../../scss/pages/_landing.scss */
+  #fixed-top .video-container .cta-text {
+    padding-bottom: 1em;
+  }
+}
+/* line 126, ../../../scss/pages/_landing.scss */
 #fixed-top .video-container .cta-text h4 {
   color: #fff;
+  margin-bottom: 1em;
   font-size: 2.125rem;
 }
-/* line 110, ../../../scss/pages/_landing.scss */
-#fixed-top .video-container .cta-text a {
-  font-size: 1.5rem;
+@media screen and (max-height: 650px) {
+  /* line 126, ../../../scss/pages/_landing.scss */
+  #fixed-top .video-container .cta-text h4 {
+    font-size: 1.5rem;
+  }
 }
-/* line 116, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 480px) {
+  /* line 126, ../../../scss/pages/_landing.scss */
+  #fixed-top .video-container .cta-text h4 {
+    font-size: 1.125rem;
+  }
+}
+/* line 143, ../../../scss/pages/_landing.scss */
 #fixed-top .sticky-bottom {
   position: absolute;
   bottom: 0;
@@ -11006,28 +11043,34 @@ footer .disclaimer p {
   z-index: 3;
   border-bottom: 1px solid #ccc;
 }
-/* line 124, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 599px) {
+  /* line 143, ../../../scss/pages/_landing.scss */
+  #fixed-top .sticky-bottom {
+    display: none;
+  }
+}
+/* line 155, ../../../scss/pages/_landing.scss */
 #fixed-top .sticky-bottom .cta-tagline {
   font-size: 1.25rem;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
 }
-/* line 129, ../../../scss/pages/_landing.scss */
+/* line 160, ../../../scss/pages/_landing.scss */
 #fixed-top .sticky-bottom .cta-tagline p {
   margin: 0;
   text-align: center;
   padding: 1.5em 0;
 }
-/* line 136, ../../../scss/pages/_landing.scss */
+/* line 167, ../../../scss/pages/_landing.scss */
 #fixed-top .sticky-bottom .cta-lower {
   background: #fff;
   color: #000;
 }
-/* line 140, ../../../scss/pages/_landing.scss */
+/* line 171, ../../../scss/pages/_landing.scss */
 #fixed-top .sticky-bottom .cta-lower .wrap {
   padding: 0.5em 0;
 }
-/* line 144, ../../../scss/pages/_landing.scss */
+/* line 175, ../../../scss/pages/_landing.scss */
 #fixed-top .sticky-bottom .cta-lower a {
   border: 1px solid #d3d3d3;
   border-radius: 21px;
@@ -11042,33 +11085,46 @@ footer .disclaimer p {
   background: transparent url(/assets/images/cta-bottom-down-arrow.png) no-repeat scroll 50% 50%/22px 13px;
 }
 
-/* line 162, ../../../scss/pages/_landing.scss */
+/* line 193, ../../../scss/pages/_landing.scss */
 #about {
   padding: 2em 0;
   text-align: center;
 }
-/* line 166, ../../../scss/pages/_landing.scss */
+/* line 197, ../../../scss/pages/_landing.scss */
 #about .logo {
   margin-bottom: 3em;
 }
-/* line 170, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 480px) {
+  /* line 197, ../../../scss/pages/_landing.scss */
+  #about .logo {
+    margin-bottom: 2em;
+    max-width: 80%;
+  }
+}
+/* line 206, ../../../scss/pages/_landing.scss */
 #about h1 {
   font-size: 2.5em;
   line-height: 1.2em;
   color: #5f7080;
   margin-bottom: 1em;
 }
-/* line 177, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 480px) {
+  /* line 206, ../../../scss/pages/_landing.scss */
+  #about h1 {
+    font-size: 2em;
+  }
+}
+/* line 217, ../../../scss/pages/_landing.scss */
 #about .social {
   margin-bottom: 2em;
 }
 
-/* line 183, ../../../scss/pages/_landing.scss */
+/* line 223, ../../../scss/pages/_landing.scss */
 #webinar-signup {
   padding: 2em 0;
   background: #e5e5e5;
 }
-/* line 187, ../../../scss/pages/_landing.scss */
+/* line 227, ../../../scss/pages/_landing.scss */
 #webinar-signup h1 {
   color: #ff6600;
   font-weight: bold;
@@ -11076,58 +11132,76 @@ footer .disclaimer p {
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 195, ../../../scss/pages/_landing.scss */
+/* line 235, ../../../scss/pages/_landing.scss */
 #webinar-signup h4 {
   text-align: center;
   color: #29444f;
   margin-bottom: 2em;
 }
-/* line 201, ../../../scss/pages/_landing.scss */
+/* line 241, ../../../scss/pages/_landing.scss */
 #webinar-signup .webinar-signup-cta {
   margin-bottom: 1em;
 }
-/* line 206, ../../../scss/pages/_landing.scss */
+/* line 246, ../../../scss/pages/_landing.scss */
 #webinar-signup .webinar-date {
   font-size: 1.5em;
 }
-/* line 210, ../../../scss/pages/_landing.scss */
+/* line 250, ../../../scss/pages/_landing.scss */
 #webinar-signup ul.checkbox-list {
   margin: 0px;
   padding: 0;
   list-style: none;
   font-size: 1.25em;
 }
-/* line 216, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 650px) {
+  /* line 250, ../../../scss/pages/_landing.scss */
+  #webinar-signup ul.checkbox-list {
+    margin-bottom: 2em;
+  }
+}
+/* line 260, ../../../scss/pages/_landing.scss */
 #webinar-signup ul.checkbox-list li {
   background: transparent url(/assets/images/checkbox.png) no-repeat scroll 0 0;
   padding-left: 50px;
   line-height: 37px;
+  margin-bottom: 1em;
+}
+/* line 268, ../../../scss/pages/_landing.scss */
+#webinar-signup .webinar-signup-cta {
+  padding: 1em;
+}
+@media screen and (max-height: 650px) {
+  /* line 268, ../../../scss/pages/_landing.scss */
+  #webinar-signup .webinar-signup-cta {
+    font-size: 1.25rem;
+    padding: 0.5em;
+  }
 }
 
-/* line 225, ../../../scss/pages/_landing.scss */
+/* line 280, ../../../scss/pages/_landing.scss */
 #stay-informed {
   padding: 4em 0;
 }
-/* line 228, ../../../scss/pages/_landing.scss */
+/* line 283, ../../../scss/pages/_landing.scss */
 #stay-informed .subscribe {
   background: #6c6c6c;
 }
-/* line 231, ../../../scss/pages/_landing.scss */
+/* line 286, ../../../scss/pages/_landing.scss */
 #stay-informed .subscribe h2 {
   color: #fff;
   font-size: 2rem;
 }
-/* line 237, ../../../scss/pages/_landing.scss */
+/* line 292, ../../../scss/pages/_landing.scss */
 #stay-informed form {
   padding: 1em 0.5em;
 }
-/* line 241, ../../../scss/pages/_landing.scss */
+/* line 296, ../../../scss/pages/_landing.scss */
 #stay-informed h1 {
   font-size: 1.375rem;
   color: #fff;
   line-height: 2em;
 }
-/* line 248, ../../../scss/pages/_landing.scss */
+/* line 303, ../../../scss/pages/_landing.scss */
 #stay-informed .cta-text p {
   font-size: 1.375rem;
   font-weight: bold;
@@ -11135,7 +11209,7 @@ footer .disclaimer p {
   margin: 15% 0 0;
 }
 
-/* line 258, ../../../scss/pages/_landing.scss */
+/* line 313, ../../../scss/pages/_landing.scss */
 .webinar-signup-cta {
   border: 2px solid white;
   -webkit-border-radius: 9px;
@@ -11151,13 +11225,19 @@ footer .disclaimer p {
   font-weight: bold;
   line-height: 1.2em;
 }
-/* line 269, ../../../scss/pages/_landing.scss */
+@media screen and (max-height: 480px) {
+  /* line 313, ../../../scss/pages/_landing.scss */
+  .webinar-signup-cta {
+    font-size: 1rem;
+  }
+}
+/* line 329, ../../../scss/pages/_landing.scss */
 .webinar-signup-cta:hover {
   color: #fff;
   background: #ee5500;
 }
 
-/* line 275, ../../../scss/pages/_landing.scss */
+/* line 335, ../../../scss/pages/_landing.scss */
 .button.submit {
   background: #ff6600;
   color: #fff;
