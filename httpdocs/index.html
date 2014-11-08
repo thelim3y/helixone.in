@@ -127,83 +127,35 @@
 	</div>
 </section>
 
+
 <section id="stay-informed">
-	<div class="row">
-		<div class="large-8 columns large-centered">
-			<div class="row">
-				<div class="subscribe medium-5 columns">
-					<form action="https://list.robly.com/subscribe/post" method="post" id="robly_embedded_subscribe_form" name="robly_embedded_subscribe_form" class="validate" target="_blank" novalidate="">
-						<input type="hidden" name="a" value="ffb892acfcae5d5a172bb0bebfc28722" />
-
-						<h1>Get Free Email Updates</h1>
-
-						<div class="row collapse">
-							<div class="small-2 columns">
-								<span class="prefix"><i class="fi-torsos"></i></span>
-							</div>
-							<div class="small-10  columns">
-								<input type="text" name="FNAME" value="" placeholder="First Name"/>
-							</div>
-						</div>
-
-						<div class="row collapse">
-							<div class="small-2 columns">
-								<span class="prefix"><i class="fi-torsos"></i></span>
-							</div>
-							<div class="small-10  columns">
-								<input type="text" name="LNAME" value="" placeholder="Last  Name"/>
-							</div>
-						</div>
-
-						<div class="row collapse">
-							<div class="small-2 columns">
-								<span class="prefix"><i class="fi-mail"></i></span>
-							</div>
-							<div class="small-10  columns">
-								<input type="email" value="" name="email" placeholder="Email Address" required="" />
-							</div>
-						</div>
-
-						<div class="row collapse text-right">
-							<button name="subscribe" class="button small submit">Subscribe</button>
-						</div>
-					</form>
-				</div>
-				
-				<div class="medium-6 columns cta-text">
-					<p>Want to be kept up-to-date with exciting new offerings and exclusive content but can't attend the webinar?</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<footer id="contact">
-	<div class="row">
-		<div class="small-12 medium-6 large-3 columns address">
-			<img src="/assets/images/logo-footer.png" alt="Helix One Trading" />
-
-			<h4>Made by traders. For traders.</h4>
-
-			<p>
-				Helix One Trading Corporation<br />
-				+44.20.3286.5607 (UK)<br />
-				+1.773.809.3471 (USA)
-			</p>			
+	<div class="row" data-equalizer>
+		<div class="small-12 columns cta-text show-for-small-only">
+			<p>Want to be kept up-to-date with exciting new offerings and exclusive content but can't attend the webinar?</p>
 		</div>
 
-		<div class="small-12 medium-6 large-5 columns contact-form">
-			<h4>Contact Us</h4>
-			
-			<form action="/" method="post" id="contact_form" name="contact_form">
-				<input type="hidden" name="action" value="contact" />
+		<div class="small-12 medium-6 large-4 large-push-2 columns" data-equalizer-watch>
+			<form action="https://list.robly.com/subscribe/post" method="post" id="robly_embedded_subscribe_form" name="robly_embedded_subscribe_form" class="validate email-signup" target="_blank" novalidate="">
+				<input type="hidden" name="a" value="8c4c3024c035704ab4c7a8f695bc8ce9" />
+				<input type="hidden" value="33273" name="sub_lists[]" />
+
+				<h1>Get Free Email Updates</h1>
+
+				<div class="row collapse">
+					<div class="small-2 columns">
+						<span class="prefix"><i class="fi-torsos"></i></span>
+					</div>
+					<div class="small-10 columns">
+						<input type="text" name="FNAME" id="DATA1" class="" value="" placeholder="First Name" required="" />
+					</div>
+				</div>
 
 				<div class="row collapse">
 					<div class="small-2 columns">
 						<span class="prefix"><i class="fi-torsos"></i></span>
 					</div>
 					<div class="small-10  columns">
-						<input type="text" name="name" value="" placeholder="Your Name" required="" />
+						<input type="text" name="LNAME" id="DATA2" class="" value="" placeholder="Last Name" required="" />
 					</div>
 				</div>
 
@@ -212,6 +164,56 @@
 						<span class="prefix"><i class="fi-mail"></i></span>
 					</div>
 					<div class="small-10  columns">
+						<input type="email" name="EMAIL" id="DATA0" autocapitalize="off" autocorrect="off" value="" placeholder="Email Address"  required="" />
+					</div>
+				</div>
+
+				<div class="row collapse text-right">
+					<button id="robly_embedded_subscribe" name="subscribe" class="button small submit">Subscribe</button>
+				</div>
+			</form>
+		</div>
+		
+		<div class="small-12 medium-6 large-4 large-pull-2 columns cta-text hide-for-small-only">
+			<p data-equalizer-watch>Want to be kept up-to-date with exciting new offerings and exclusive content but can't attend the webinar?</p>
+		</div>
+	</div>
+</section>
+
+<footer id="contact">
+	<div class="row">
+		<div class="small-12 medium-3 large-3 columns address">
+			<img src="/assets/images/logo-footer.png" alt="Helix One Trading" />
+
+			<h4>Made by traders.<br />For traders.</h4>
+
+			<p>
+				Helix One Trading Corporation<br />
+				+44.20.3286.5607 (UK)<br />
+				+1.773.809.3471 (USA)
+			</p>			
+		</div>
+
+		<div class="small-12 medium-5 large-4 large-push-1 columns contact-form">
+			<h4>Contact Us</h4>
+			
+			<form action="/" method="post" id="contact_form" name="contact_form">
+				<input type="hidden" name="action" value="contact" />
+
+				<div class="row collapse">
+					<div class="small-1 columns">
+						<span class="prefix"><i class="fi-torsos"></i></span>
+					</div>
+					<div class="small-11  columns">
+						<input type="text" name="name" value="" placeholder="Your Name" required="" />
+					</div>
+				</div>
+
+				<div class="row collapse">
+					<div class="small-1 columns">
+						<span class="prefix"><i class="fi-mail"></i></span>
+					</div>
+					<div class="small-11  columns">
 						<input type="email" name="email" value="" placeholder="Your Email" required="" />
 					</div>
 				</div>
@@ -228,7 +230,7 @@
 			</form>
 		</div>
 
-		<div class="small-12 large-4 columns disclaimer">
+		<div class="small-12 medium-4 large-3 columns disclaimer">
 			<h4>Risk Disclaimer:</h4>
 			<p>
 				Trading Futures, Options on Futures, and retail off-exchange foreign currency transactions involves substantial risk of loss and is not suitable for all investors. You should carefully consider whether trading is suitable for you in light of your circumstances, knowledge, and financial resources. You may lose all or more of your initial investment. Opinions, market data, and recommendations are subject to change at any time.
@@ -346,6 +348,41 @@ $(function() {
 	});
 });
 </script>
+
+<script>
+$(document).ready(function () {
+	$("#robly_embedded_subscribe").click(function (e) {
+		e.preventDefault();
+		
+		var email = $("#DATA0").val();
+		if (!is_valid_email_address(email)) {
+			alert("Please enter a valid email address");
+			return false;
+		}
+		
+		if(!$("#DATA0").val()) {
+			alert("Please fill in First Name field");
+			return false
+		}
+
+		if(!$("#DATA1").val()) {
+			alert("Please fill in Last Name field");
+			return false
+		}
+		
+		var f = $("#robly_embedded_subscribe_form");
+		f.submit();
+		
+		return false;
+	});
+});
+
+function is_valid_email_address(emailAddress) {
+	var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+	return pattern.test(emailAddress);
+}
+</script>
+
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>

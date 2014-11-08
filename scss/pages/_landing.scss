@@ -44,7 +44,14 @@
 		
 		.webinar-signup-cta {
 			padding: 1em;
-
+			background: transparent;
+			@include border-radius(2em);
+			outline: none;
+			
+			&:hover {
+				background: #ee5500;
+			}
+			
 			@media screen and (max-height: 650px) {
 				font-size: rem-calc(20);
 				padding: 0.5em;
@@ -54,7 +61,7 @@
 		video {
 			position: absolute;
 			right: 0;
-			top: 0;
+			bottom: 0;
 			left: auto;
 			z-index: -1;
 			@include opacity(0.75);
@@ -290,9 +297,11 @@
 	}
 
 	form {
-		padding: 1em 0.5em;
+		padding: 1em;
+		background: #58707c;
+		@include border-radius(1em);
 	}
-	
+
 	h1 {
 		font-size: rem-calc(22px);
 		color: #fff;
@@ -300,11 +309,23 @@
 	}	
 	
 	.cta-text {
+		display: table;
+		
 		p {
+			@media #{$small-only} {
+				margin-bottom: 2em;
+				text-align: center;
+				display: block;
+			}
+
+			@media #{$medium-up} {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			
 			font-size: rem-calc(22);
 			font-weight: bold;
 			color:#607177;
-			margin:15% 0 0;
 		}
 	}
 }
@@ -312,7 +333,7 @@
 
 .webinar-signup-cta {
 	border: 2px solid white;
-	@include border-radius(9px);
+	@include border-radius(2em);
 	background: #ff6600;
 	color: #fff;
 	padding: 0.5em;
@@ -334,8 +355,14 @@
 
 .button.submit {
 	background: #ff6600;
+	@include border-radius(0.75em);
+	border: 1px solid #fff;
 	color: #fff;
 	font-size: rem-calc(14);
 	padding: 0.3rem 0.875rem;
 	margin: 0;
+	
+	&:hover {
+		background: #dd5500;
+	}
 }

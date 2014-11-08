@@ -72,12 +72,11 @@ function sendMail($name, $email, $msg) {
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=iso-8859-1";
-// 	$headers[] = "From: HelixOne Trading <info@helixonetrading.in>";
-	$headers[] = "From: HelixOne Trading <j.kessick@gmail.com>";
+ 	$headers[] = "From: HelixOne Trading <info@helixonetrading.in>";
 	$headers[] = "Reply-To: {$name} <{$email}>";
 	$headers[] = "HelixOne Trading India Contact Form - {$name}";
 	$headers[] = "X-Mailer: PHP/".phpversion();
-   	mail('j.kessick@gmail.com', "HelixOne India Contact Form - {$name}", $msg, implode("\r\n", $headers));
+   	mail('info@helixonetrading.in', "HelixOne India Contact Form - {$name}", $msg, implode("\r\n", $headers));
 }
 
 
